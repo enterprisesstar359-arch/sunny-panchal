@@ -121,16 +121,26 @@
     }
     .product-card:hover { transform: translateY(-6px); box-shadow: 0 12px 36px rgba(0,0,0,0.14); }
 
-    /* BIG emoji/image area */
+    /* Product image area */
     .product-visual {
       width: 100%;
-      height: 260px;
-      background: linear-gradient(135deg, #f0f0f0, #e4e4e4);
+      height: 340px;
+      background: #f7f7f7;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 6rem;
       position: relative;
+      overflow: hidden;
+    }
+    .product-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-visual img {
+      transform: scale(1.05);
     }
     .product-tag-badge {
       position: absolute;
@@ -175,6 +185,7 @@
     .price-our { font-size: 1.3rem; font-weight: 800; color: var(--green); }
     .price-market { font-size: 0.78rem; color: #999; text-decoration: line-through; }
     .price-save { font-size: 0.72rem; background: #e8f5e9; color: var(--green); padding: 2px 8px; border-radius: 10px; font-weight: 700; }
+    .delivery-note { font-size: 0.7rem; color: #999; margin-bottom: 14px; font-style: italic; }
 
     .enquire-btn {
       display: block;
@@ -243,7 +254,7 @@
       .trust-bar { gap: 16px; }
       .nav-links { display: none; }
       .hero { padding: 60px 5% 50px; }
-      .product-visual { height: 300px; font-size: 8rem; }
+      .product-visual { height: 280px; }
       .product-card { margin-bottom: 8px; }
       .stats { gap: 30px; }
     }
@@ -297,7 +308,7 @@
     <!-- 1. Mesh Food Cover -->
     <div class="product-card">
       <div class="product-visual">
-        🍽️
+        <img src="images/food_cover.jpg" alt="Stainless Steel Mesh Food Cover">
         <span class="product-tag-badge">Food Protection</span>
       </div>
       <div class="product-body">
@@ -308,6 +319,7 @@
           <span class="feature-chip">Smooth Edging</span>
           <span class="feature-chip">Steel Knob Handle</span>
         </div>
+        <p class="delivery-note">* Price excludes delivery charges</p>
         <div class="price-row">
           <div>
             <div class="price-label">Our Price</div>
@@ -325,7 +337,7 @@
     <!-- 2. Fruit Basket -->
     <div class="product-card">
       <div class="product-visual">
-        🧺
+        <img src="images/fruit_basket.jpg" alt="Fruit Basket with Dome Lid">
         <span class="product-tag-badge">Kitchen Essential</span>
       </div>
       <div class="product-body">
@@ -337,6 +349,7 @@
           <span class="feature-chip">Keeps Flies Out</span>
           <span class="feature-chip">Food Safe</span>
         </div>
+        <p class="delivery-note">* Price excludes delivery charges</p>
         <div class="price-row">
           <div>
             <div class="price-label">Our Price</div>
@@ -354,7 +367,7 @@
     <!-- 3. Agarbatti Stand -->
     <div class="product-card">
       <div class="product-visual">
-        🪔
+        <img src="images/agarbatti_stand.jpg" alt="Agarbatti Stand">
         <span class="product-tag-badge">Pooja &amp; Devotion</span>
       </div>
       <div class="product-body">
@@ -365,6 +378,7 @@
           <span class="feature-chip">Perforated Design</span>
           <span class="feature-chip">Stable Base</span>
         </div>
+        <p class="delivery-note">* Price excludes delivery charges</p>
         <div class="price-row">
           <div>
             <div class="price-label">Our Price</div>
@@ -382,7 +396,7 @@
     <!-- 4. Electric Dhoop Burner -->
     <div class="product-card">
       <div class="product-visual">
-        🌿
+        <img src="images/dhoop_burner.jpg" alt="Electric Dhoop Burner">
         <span class="product-tag-badge">Pooja &amp; Wellness</span>
       </div>
       <div class="product-body">
@@ -394,6 +408,7 @@
           <span class="feature-chip">Power Saving</span>
           <span class="feature-chip">Shock Proof</span>
         </div>
+        <p class="delivery-note">* Price excludes delivery charges</p>
         <div class="price-row">
           <div>
             <div class="price-label">Our Price</div>
@@ -411,7 +426,7 @@
     <!-- 5. Mixer Jars -->
     <div class="product-card">
       <div class="product-visual">
-        🫙
+        <img src="images/mixer_jars.jpg" alt="Mixer Grinder Jar Set">
         <span class="product-tag-badge">Kitchen Appliance</span>
       </div>
       <div class="product-body">
@@ -422,6 +437,7 @@
           <span class="feature-chip">3 SS Grinding Jars</span>
           <span class="feature-chip">Sharp Blades</span>
         </div>
+        <p class="delivery-note">* Price excludes delivery charges</p>
         <div class="price-row">
           <div>
             <div class="price-label">Our Price</div>
@@ -439,7 +455,7 @@
     <!-- 6. Oil Dispenser -->
     <div class="product-card">
       <div class="product-visual">
-        🫗
+        <img src="images/oil_dispenser.jpg" alt="Oil Dispenser Bottle">
         <span class="product-tag-badge">Kitchen Essential</span>
       </div>
       <div class="product-body">
@@ -451,6 +467,7 @@
           <span class="feature-chip">No Drip Design</span>
           <span class="feature-chip">Air Ventilation</span>
         </div>
+        <p class="delivery-note">* Price excludes delivery charges</p>
         <div class="price-row">
           <div>
             <div class="price-label">Our Price</div>
@@ -468,7 +485,7 @@
     <!-- 7. Kitchen Strainer -->
     <div class="product-card">
       <div class="product-visual">
-        🍳
+        <img src="images/strainer.jpg" alt="Kitchen Strainer">
         <span class="product-tag-badge">Cooking Tool</span>
       </div>
       <div class="product-body">
@@ -479,6 +496,7 @@
           <span class="feature-chip">Tight Iron Net</span>
           <span class="feature-chip">Made in India</span>
         </div>
+        <p class="delivery-note">* Price excludes delivery charges</p>
         <div class="price-row">
           <div>
             <div class="price-label">Our Price</div>
@@ -496,7 +514,7 @@
     <!-- 8. Water Bottle -->
     <div class="product-card">
       <div class="product-visual">
-        💧
+        <img src="images/water_bottle.jpg" alt="Stainless Steel Water Bottle">
         <span class="product-tag-badge">Hydration</span>
       </div>
       <div class="product-body">
@@ -508,6 +526,7 @@
           <span class="feature-chip">Mirror Finish</span>
           <span class="feature-chip">BPA Free</span>
         </div>
+        <p class="delivery-note">* Price excludes delivery charges</p>
         <div class="price-row">
           <div>
             <div class="price-label">Our Price</div>
